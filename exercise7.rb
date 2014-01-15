@@ -30,6 +30,18 @@ end
 updatedhash = multiplier(students)
 updatedhash.delete(:cohort2)
 
-puts "#{updatedhash}"
+puts students.keys
+
+
+def totalstudents(hsh)
+	sum = 0
+	hsh.each do |key, value|
+		sum = sum + value
+	end
+    sum
+end
+
+s = totalstudents(updatedhash)
+puts "#{s}"
 
 
