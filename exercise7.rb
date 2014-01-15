@@ -4,8 +4,8 @@ students = {
 	:cohort3 => 22
 }
 
-def display(list)
-	list.each do |key, value|
+def display(hash)
+	hash.each do |key, value|
 		puts "#{key}: #{value} students"
 	end
 end
@@ -13,3 +13,23 @@ end
 display(students)
 
 students[:cohort4] = 43
+
+puts students.keys
+
+def multiplier(hsh)
+	hsh.each do |key, value|
+		newvalue = value * 1.05
+		hsh[key] = newvalue
+		puts "#{newvalue}"
+	end
+	return hsh
+end
+
+
+
+updatedhash = multiplier(students)
+updatedhash.delete(:cohort2)
+
+puts "#{updatedhash}"
+
+
