@@ -19,3 +19,11 @@ additem(list, item)
 showlist(list)
 
 puts "There are #{list.length} items on your list!"
+
+if list.include?("bananas")
+	puts "Bananas are on the list!"
+else
+	puts "Bananas are NOT on the list!"
+end
+
+puts list[1]
